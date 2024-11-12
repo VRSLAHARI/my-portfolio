@@ -3,49 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Student Details</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Portfolio</h1>
-        <h2>VELPULA R S LAHARI</h2>
-        
-        <p class="objective">Electronics and Communication Engineering graduate with a passion for software development and automation.</p>
-
-        <div class="icons">
-            <div class="icon" id="skills-btn">
-                <i class="fas fa-cogs"></i>
-                <p>Skills</p>
-            </div>
-            <div class="icon" id="projects-btn">
-                <i class="fas fa-briefcase"></i>
-                <p>Projects</p>
-            </div>
-        </div>
-
-        <div id="skills" class="hidden">
-            <ul>
-                <li>Programming: C, Python</li>
-                <li>Web Technologies: HTML5, CSS3, JavaScript, Bootstrap</li>
-                <li>Frameworks: Angular 16</li>
-                <li>Database: MySQL</li>
-            </ul>
-        </div>
-
-        <div id="projects" class="hidden">
-            <ul>
-                <li><strong>Smart Sole:</strong> Designed energy-generating insoles using piezoelectric materials.</li>
-                <li><strong>Cruise Ship Water Quality Monitoring:</strong> Developed a system to monitor water quality with sensors.</li>
-            </ul>
-        </div>
+    <h1>Student Details</h1>
+    <div>
+        <label for="subject">Select Subject:</label>
+        <select id="subject">
+            <option value="English">English</option>
+            <option value="Maths">Maths</option>
+            <option value="Science">Science</option>
+            <option value="SocialScience">Social Science</option>
+        </select>
     </div>
-
+    <div>
+        <label><input type="radio" name="filter" value="above"> Above</label>
+        <label><input type="radio" name="filter" value="below"> Below</label>
+        <label><input type="radio" name="filter" value="between"> Between</label>
+        <input type="number" id="value1">
+        <input type="number" id="value2" style="display: none;">
+    </div>
+    <button id="filterBtn">Filter</button>
+    <button id="clearBtn">Clear</button>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>English</th>
+                <th>Maths</th>
+                <th>Science</th>
+                <th>Social Science</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically generated here -->
+        </tbody>
+    </table>
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
